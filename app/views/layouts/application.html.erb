@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Turbolinks 3.0 Playground</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header id="header" data-turbolinks-permanent>
+  <h1>Turbolinks 3.0 Playground</h1>
+	<small>After the initial page load, this will not be refreshed when navigating to other pages,
+		thanks to the <code>data-turbolinks-permanent</code> attribute.</small>
+</header>
+
+<%= yield %>
+
+</body>
+</html>
