@@ -1,19 +1,30 @@
+h1 {
+  text-align: center;
+}
+
 small {
-  background-color: yellow;
+  display: block;
+  font-style: italic;
+  line-height: 1em;
   color: #888;
   padding: 2px 4px;
 }
 
 code {
-  padding: 0px 4px;
+  padding: 0px 0px;
+  font-style: normal;
 }
 
 header, #flash, #comments, form {
-  border: solid 1px #888;
+  border: dashed 3px #ddd;
   padding: 10px;
 }
 
-#comments, form, #new {
+header, #notice, #flash, #comments {
+  margin-bottom: 1em;
+}
+
+#new {
   margin-top: 1em;
 }
 

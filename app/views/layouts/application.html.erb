@@ -8,10 +8,12 @@
 </head>
 <body>
 
+<small><code>header</code></small>
+<small>After the initial page load, this will not be refreshed when navigating to other pages, 
+  thanks to the <code>data-turbolinks-permanent</code> attribute.</small>
+
 <header id="header" data-turbolinks-permanent>
   <h1>Turbolinks 3.0 Playground</h1>
-	<small>After the initial page load, this will not be refreshed when navigating to other pages,
-		thanks to the <code>data-turbolinks-permanent</code> attribute.</small>
 </header>
 
 <%= yield %>

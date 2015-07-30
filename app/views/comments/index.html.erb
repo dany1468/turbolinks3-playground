@@ -1,25 +1,34 @@
-<h2>Comments</h2>
+<small><code>#notice</code></small>
+<small>This will be refreshed in addition to the other tags specified with 
+  <code>change:</code> on a redirect,
+  thanks to the <code>data-turbolinks-temporary</code> attribute.</small>
 
 <p id="notice" data-turbolinks-temporary><%= notice %></p>
 
+<small><code>#flash</code></small>
+<small>This will be refreshed in addition to the other tags specified with 
+  <code>change:</code> on a redirect,
+  thanks to the <code>data-turbolinks-temporary</code> attribute.</small>
+
 <div id="flash" data-turbolinks-temporary>
-	You have <%= @comments.count %> comments.<br>
-	<small>This will be refreshed in addition to the other tags specified with <code>change:</code> on a redirect,
-		thanks to the <code>data-turbolinks-temporary</code> attribute.</small>
+  You have <%= @comments.count %> comments.<br>
 </div>
 
+
+<small><code>#comments</code></small>
+<small>This will be refreshed by a redirect with <code>{change: 'comments'}</code>.</small>
+
 <div id="comments">
-	<ol>
-		<% @comments.each do |comment| %>
-		<li id="comments:<%= comment.id %>">
-			<%= simple_format comment.body %>
-			<%= link_to "show", comment %> -
-	    <%= link_to 'edit', edit_comment_path(comment) %> -
-	    <%= link_to 'destroy', comment, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %>
-		</li>
-		<% end %>
-	</ol>
-	<small>This will be refreshed by a redirect with <code>change: 'comments'</code>.</small>
+  <ol>
+    <% @comments.each do |comment| %>
+    <li id="comments:<%= comment.id %>">
+      <%= simple_format comment.body %>
+      <%= link_to "show", comment %> -
+      <%= link_to 'edit', edit_comment_path(comment) %> -
+      <%= link_to 'destroy', comment, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %>
+    </li>
+    <% end %>
+  </ol>
 </div>
 
 <%= render 'form', comment: @new_comment, remote: true %>

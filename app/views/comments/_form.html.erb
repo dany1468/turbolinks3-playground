@@ -1,3 +1,6 @@
+<small><code>form</code></small>
+<small>This will be refreshed by a redirect with <code>{change: 'new_comment'}</code>.</small>
+
 <%= form_for comment, remote: remote, id: 'new_comment' do |f| %>
   <% if comment.errors.any? %>
     <div id="error_explanation">
@@ -18,5 +21,4 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-	<small>This will be refreshed by a redirect with <code>change: 'new_comment'</code>.</small>
 <% end %>
