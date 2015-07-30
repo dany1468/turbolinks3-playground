@@ -11,6 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui/core
+//= require jquery-ui/effect
+//= require jquery-ui/effect-highlight
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
