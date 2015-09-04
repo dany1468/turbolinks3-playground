@@ -15,3 +15,5 @@ The comments index page has 3 more sections:
 - The new comment form. It will be explicitly refreshed by the redirect in the `create` action.
 
 Note that the `create` action is used for both regular and ajax POST, without any modification besides the `change` argument for the redirect.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
