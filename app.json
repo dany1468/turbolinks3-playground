@@ -1,6 +1,12 @@
 {
   "name": "Turbolinks 3 Playground",
   "description": "A sample application to show how Turbolinks 3.0 works.",
-  "repository": "https://github.com/otagi/turbolinks3-playground",
-  "keywords": ["ruby", "rails", "turbolinks"]
+  "success_url": "/",
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "env": {
+    "RAILS_ENV": "production",
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  },
 }
