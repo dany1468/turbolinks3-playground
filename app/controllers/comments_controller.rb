@@ -4,6 +4,8 @@ class CommentsController < ApplicationController
   def index
     @comments = Comment.all
     @new_comment = Comment.new
+
+    @books = Book.all
   end
 
   def show

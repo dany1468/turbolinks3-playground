@@ -1,3 +1,11 @@
-<div id="new_book">
-  <%= @books.count %>
+<div id="books">
+  book_count:<%= @books.count %>
+  <ol>
+    <% @books.each do |book| %>
+        <li id="books:<%= book.id %>">
+          <%= simple_format book.author %>
+          <%= simple_format book.title %>
+        </li>
+    <% end %>
+  </ol>
 </div>

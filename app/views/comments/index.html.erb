@@ -31,6 +31,9 @@
   </ol>
 </div>
 
+<%= render 'books/index' %>
+<div id="new_book"><%= link_to 'Create Book', new_book_path, method: :get, remote: true %></div>
+
 <%= render 'form', comment: @new_comment, remote: true %>
 
 <p id="new"><%= link_to "Or create a comment in a separate view", new_comment_path %></p>

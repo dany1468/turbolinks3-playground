@@ -15,16 +15,16 @@ code {
   font-style: normal;
 }
 
-header, #flash, #comments, form {
+header, #flash, #comments, #books, form {
   border: dashed 3px #ddd;
   padding: 10px;
 }
 
-header, #notice, #flash, #comments {
+header, #notice, #flash, #comments, #books {
   margin-bottom: 1em;
 }
 
-#new {
+#new, #new_book {
   margin-top: 1em;
 }
 

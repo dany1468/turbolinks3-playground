@@ -1,36 +1,12 @@
-<small><code>#notice</code></small>
-<small>This will be refreshed in addition to the other tags specified with 
-  <code>change:</code> on a redirect,
-  thanks to the <code>data-turbolinks-temporary</code> attribute.</small>
-
-<p id="notice" data-turbolinks-temporary><%= notice %></p>
-
-<small><code>#flash</code></small>
-<small>This will be refreshed in addition to the other tags specified with 
-  <code>change:</code> on a redirect,
-  thanks to the <code>data-turbolinks-temporary</code> attribute.</small>
-
-<div id="flash" data-turbolinks-temporary>
-  You have <%= @comments.count %> comments.<br>
-</div>
-
-
-<small><code>#comments</code></small>
-<small>This will be refreshed by a redirect with <code>{change: 'comments'}</code>.</small>
-
-<div id="comments">
+<div id="books">
+  book_count:<%= @books.count %>
   <ol>
-    <% @comments.each do |comment| %>
-    <li id="comments:<%= comment.id %>">
-      <%= simple_format comment.body %>
-      <%= link_to "show", comment %> -
-      <%= link_to 'edit', edit_comment_path(comment) %> -
-      <%= link_to 'destroy', comment, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %>
-    </li>
+    <% @books.each do |book| %>
+        <li id="books:<%= book.id %>">
+          <%= simple_format book.author %>
+          <%= simple_format book.title %>
+        </li>
     <% end %>
   </ol>
 </div>
 
-<%= render 'form', comment: @new_comment, remote: true %>
-
-<p id="new"><%= link_to "Or create a comment in a separate view", new_comment_path %></p>
