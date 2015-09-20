@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/turbolinks.git
-  revision: 4f99d6c6c80a1e0ce2815a6a912ed9fdb9ec795e
+  revision: dc4f5f36f1c1965e6c5921f49d20fa718277f19e
   specs:
     turbolinks (3.0.0)
       coffee-rails
@@ -49,6 +49,7 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -59,7 +60,7 @@ GEM
     columnize (0.9.0)
     debug_inspector (0.0.2)
     erubis (2.7.0)
-    execjs (2.5.2)
+    execjs (2.6.0)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -73,15 +74,23 @@ GEM
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (1.8.3)
-    loofah (2.0.2)
+    loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.5)
     mini_portile (0.6.2)
-    minitest (5.7.0)
+    minitest (5.8.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (3.2.0)
+      byebug (~> 5.0)
+      pry (~> 0.10)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -98,7 +107,7 @@ GEM
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.6)
+    rails-dom-testing (1.0.7)
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)
@@ -117,6 +126,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
+    slop (3.6.0)
     spring (1.3.6)
     sprockets (3.1.0)
       rack (~> 1.0)
@@ -143,11 +153,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
   coffee-rails (~> 4.1.0)
   jquery-rails
   jquery-turbolinks
   jquery-ui-rails
+  pry-byebug
   rails (= 4.2.1)
   sass-rails (~> 5.0)
   spring
